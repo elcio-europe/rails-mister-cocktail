@@ -7,5 +7,5 @@ class Ingredient < ApplicationRecord
 
   validates :name, uniqueness: true, presence: true
 
-
+  ## falta fazer migration com os campos ex: name dos models
 end

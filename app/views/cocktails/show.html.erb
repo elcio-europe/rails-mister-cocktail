@@ -4,6 +4,14 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <h1><%= @cocktail.name %></h1>
+      <% if @cocktail.picture? %>
+            <%= image_tag @cocktail.picture.url %>
+      <% else %>
+            <div>
+             <img src="http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg" >
+            </div> %>
+      <% end %>
+
       <% @cocktail.doses.each do |dose| %>
         <p>
           <%= "#{dose.description} of #{dose.ingredient.name}"%>
